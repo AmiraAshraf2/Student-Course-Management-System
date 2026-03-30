@@ -156,6 +156,36 @@ void saveDataInFlie() {
     }
 }
 
+void loadFromFile() {
+
+    ifstream studentFile("studentdata.txt");
+
+    if (!studentFile) {
+        cout << "No saved data found.\n";
+        return;
+    }
+
+    indexedStudents.clear();
+
+    int id, courseCount;
+    string name, course;
+    double gpa;
+
+    while (studentFile >> id >> name >> gpa >> courseCount) {
+
+        Student s(id, name, gpa);
+
+        for (int i = 0; i < courseCount; i++) {
+            studentFile >> course;
+            s.enrollCourse(course);
+        }
+
+        indexedStudents.insert({ id, s });
+    }
+
+    studentFile.close();
+    cout << "Data loaded successfully.\n";
+}
 
 
 
