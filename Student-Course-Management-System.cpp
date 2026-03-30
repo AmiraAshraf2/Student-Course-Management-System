@@ -176,7 +176,7 @@ int main()
         cout << "7. Sort Students by GPA\n";
         cout << "8. Load data from file\n";
         cout << "9. Save data to file\n";
-        cout << "10. Save data to database\n";
+        cout << "10. exit \n";
 
         cout << "Choice: ";
         cin >> choice;
@@ -190,14 +190,14 @@ int main()
         case 5: enrollCoursefunc(); break;
         case 6: showCourses(); break;
         case 7: sortStudents(); break;
-        case 8: cout << "Goodbye\n"; break;
-        case 9: cout << "Goodbye\n"; break;
+        case 8: saveDataInFlie(); break;
+        case 9: loadFromFile(); break;
         case 10: cout << "Goodbye\n"; break;
 
         default:
             cout << "Invalid choice\n";
         }
 
-    } while (choice != 8);
+    } while (choice != 10);
     return 0;
 }
