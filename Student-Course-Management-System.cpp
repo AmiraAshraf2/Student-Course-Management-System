@@ -174,8 +174,8 @@ int main()
         cout << "5. Enroll Student in Course\n";
         cout << "6. Show Student Courses\n";
         cout << "7. Sort Students by GPA\n";
-        cout << "8. Load data from file\n";
-        cout << "9. Save data to file\n";
+        cout << "8. Save data to file\n";
+        cout << "9. Load data from file \n";
         cout << "10. exit \n";
 
         cout << "Choice: ";
